@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Proyecto</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <style>
+
+        body {
+            background-color: #f4f4f9; /* Fondo gris suave para toda la página */
+            font-family: 'Arial', sans-serif; /* Fuente clara y moderna */
+        }
+        
+        .navbar {
+            background-color: #ff006f; 
+        }
+
+        .navbar a, .navbar a:hover {
+            color: #ff006f; /* Texto blanco en los enlaces */
+        }
+
+        .container {
+            margin-top: 30px;
+            background-color: #ff006f; /* Fondo blanco para el contenedor principal */
+            padding: 20px;
+            border-radius: 8px; /* Bordes redondeados */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+
+        h1 {
+            color: #000000; /* Título en azul */
+            font-size: 2.5rem; /* Tamaño grande para el título */
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background-color: rgb(112, 1, 64); /* Color de fondo azul para los botones */
+            border: none; /* Eliminar borde */
+            padding: 10px 20px;
+            border-radius: 5px; /* Bordes redondeados */
+            color: white;
+            font-size: 1.2rem;
+            transition: background-color 0.5s;
+        }
+
+        .btn-primary:hover {
+            background-color: #ff006f; /* Color más oscuro para el hover */
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse; /* Evita bordes dobles */
+        }
+
+        table th, table td {
+            padding: 12px; /* Espaciado en las celdas */
+            text-align: center;
+            border: 1px solid #dee2e6; /* Borde sutil */
+        }
+
+        table thead {
+            background-color: #ff006f; /* Color azul de fondo para los encabezados */
+            color: white; /* Color blanco para el texto */
+        }
+
+        table tbody tr:nth-child(odd) {
+            background-color: white; /* Fondo gris claro para las filas impares */
+        }
+
+        table tbody tr:nth-child(even) {
+            background-color: #ffffff; /* Fondo blanco para las filas pares */
+        }
+
+        table tbody tr:hover {
+            background-color: #e9ecef; /* Fondo gris suave al pasar el cursor */
+            cursor: pointer; /* Cambio de cursor */
+        }
+
+        /* Estilos de borde en los encabezados */
+        table th {
+            border-top: 3px solid #ff006f; /* Borde superior más grueso */
+        }
+
+        /* Espaciado en los bordes laterales */
+        table td {
+            border-left: 1px solid #dee2e6;
+        }
+
+        table td:first-child {
+            border-left: none; /* Eliminar borde izquierdo de la primera columna */
+        }
+
+        /* Estilo de la tabla al estar vacía */
+        table tbody tr.no-data {
+            color: #888;
+            text-align: center;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+   <!-- Navbar de Bootstrap -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="#">Energía</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+           
+              <!-- Dropdown para más opciones -->
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Energias
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="todos_los_tipos_energia.html">Consulta general</a>
+                      <a class="dropdown-item" href="buscar_tipo_energia.html">Buscar tipo de energia</a>
+                      <a class="dropdown-item" href="registro_proyecto.html">Agregar Nuevo Proyecto</a>
+                  </div>
+              </li>
+          </li>
+          <!-- Dropdown para más opciones -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Proyectos
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="proyectos.html">Consulta general</a>
+                <a class="dropdown-item" href="registro_proyecto.html">Agregar Nuevo Tipo</a>
+            </div>
+        </li>
+            <!-- Dropdown para más opciones -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Minerales
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="minerales.html">Consulta general</a>
+                  <a class="dropdown-item" href="registrar_mineral.html">Agregar Nuevo Tipo</a>
+              </div>
+          </li>
+              <!-- Dropdown para más opciones -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Investigadores
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="investigadores.html">Consulta general</a>
+                    <a class="dropdown-item" href="registro_investigador.html">Agregar nuevo investigador</a>
+                </div>
+            </li>
+               </ul>
+          </ul>
+      </div>
+  </div>
+</nav>
+
+
+    <center><div class="container mt-4">
+        <h1>Registrar Nuevo Proyecto</h1></center
+
+        <!-- Formulario para agregar un proyecto -->
+        <form id="formulario-proyecto">
+            <div class="form-group">
+                <label for="nombre">Nombre del Proyecto:</label>
+                <input type="text" class="form-control" id="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripción:</label>
+                <textarea class="form-control" id="descripcion" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="ubicacion">Ubicación:</label>
+                <input type="text" class="form-control" id="ubicacion" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha_inicio">Fecha de Inicio:</label>
+                <input type="date" class="form-control" id="fecha_inicio" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha_fin">Fecha de Fin:</label>
+                <input type="date" class="form-control" id="fecha_fin" required>
+            </div>
+            <div class="form-group">
+                <label for="tipo_energia">Tipo de Energía:</label>
+                <select class="form-control" id="tipo_energia" required>
+                    <!-- Los tipos de energía se insertarán dinámicamente aquí -->
+                </select>
+
+            </div>
+            <center>
+            <button type="submit" class="btn btn-primary">Registrar Proyecto</button></center>
+          <center><a href="proyectos.html" class="btn btn-secondary mt-3">Volver a Proyectos</a></center>
+        </form>
+    </div>
+
+    <script src="registro_proyecto.js"></script>
+</body>
+</html>
